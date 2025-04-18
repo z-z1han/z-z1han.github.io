@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zihan's Homepage</title>
+  <link rel="stylesheet" href="style.css">
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+const themes = [
+  // { link: "#4B0082", bg: "#f4f2fa", border: "#3a0066" },
+  { link: "#2E8B57", bg: "#eefaf4", border: "#1d6040" },
+  { link: "#B22222", bg: "#fef0f0", border: "#8f1a1a" },
+  { link: "#008080", bg: "#eafcfc", border: "#005757" },
+  { link: "#FF8C00", bg: "#fff6ec", border: "#cc6e00" },
+  // { link: "#6A0DAD", bg: "#f6f2fc", border: "#500a90" },
+];
+
+const theme = themes[Math.floor(Math.random() * themes.length)];
+
+document.body.style.backgroundColor = "#f9f9f9";
+document.querySelectorAll("a").forEach(link => {
+  link.style.color = theme.link;
+});
+document.documentElement.style.setProperty('--link-color', theme.link);
+document.querySelectorAll(".pub").forEach(box => {
+  box.style.borderColor = theme.border;
+  box.style.borderLeft = `4px solid ${theme.border}`;
+});
+});
+</script>
+
+</head>
+
+
+
+<body>
+  <div class="header-with-photo">
+  <div>
+  <h1>Zihan ZHANG</h1>
+    <a href="https://orcid.org/0009-0000-4620-5245" aria-label="View ORCID record">
+    <img src="files/orcid/ORCID-iD_icon_vector.svg" height="20" alt="ORCID iD"/>
+    0009-0000-4620-5245
+    </a>
+  </div>
+  <img src="files/profile1.jpg" alt="My photo" class="profile-float">
+</div>
+
+  <section id="about">
+    <!-- <h2>About Me</h2> -->
+    <p>
+      I'm currently a PhD student at <a href="https://www.nii.ac.jp"> National Institute of Informatics</a>,
+      advised by Prof. <a href="https://research.nii.ac.jp/~yyoshida">Yuichi Yoshida</a>.
+      I'm interested in theoretical computer science.
+      My research focuses on approximate counting, sensitivity of algorithms, Markov chains, etc.
+    </p>
+    <p>
+      Prior to that, I received my Bachelor's degree in Mathematics in 2023 from Zhiyuan Honors Program at <a href="https://www.sjtu.edu.cn">Shanghai Jiao Tong University</a>.
+    </p>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+
+    <div class="pub">
+      <div>
+        <a href="https://dl.acm.org/doi/10.1145/3618260.3649724" class="pub-title">
+        Sampling proper colorings on line graphs using (1+o(1))Δ colors
+        </a>
+        <a href="https://arxiv.org/abs/2307.08080v2" class="arxiv">[arXiv]</a>
+      </div>
+      <div class="authors">
+        Yulin Wang, Chihao Zhang and Zihan Zhang
+      </div>
+      <div><em>In Proceedings of the 56th Annual ACM Symposium on Theory of Computing (<b>STOC</b>'24)</em></div>
+    </div>
+
+    <div class="pub">
+      <div>
+        <a href="https://arxiv.org/abs/2502.06586" class="pub-title">
+        Decay of correlation for edge colorings when q>3Δ
+        </a>
+        <a href="https://arxiv.org/abs/2502.06586" class="arxiv">[arXiv]</a>
+      </div>
+      <div class="authors">
+        Zejia Chen, Yulin Wang, Chihao Zhang and Zihan Zhang
+      </div>
+      <div><em>To appear at the 52nd EATCS International Colloquium on Automata, Languages, and Programming (<b>ICALP</b>'25)</em></div>
+      <div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>zihan [ɑʈ] niiˎacˎjp</p>
+  </section>
+
+  <footer>
+    Last updated: Apr 2025
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+/* Base styles */
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #f9fafc;
+  color: #333;
+  margin: 0;
+  padding: 2em;
+  max-width: 800px;
+  line-height: 1.7;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2 {
+  color: #2c3e50;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.2em;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.6em;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.2em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+/* Navigation */
+nav {
+  margin-top: 1.5em;
+  margin-bottom: 2em;
+}
+
+nav a {
+  margin-right: 1.5em;
+  text-decoration: none;
+  font-weight: 500;
+  color: #008080;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #008080;
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--link-color);
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+
+/* Publication block */
+.pub {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-left: 4px solid #007acc;
+  padding: 1em;
+  border-radius: 6px;
+  margin-bottom: 1.5em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  transition: box-shadow 0.2s ease;
+}
+
+.pub:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.pub-title {
+  font-weight: bold;
+  color: #1c2025;
+  margin-bottom: 0.3em;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #777;
+  margin-top: 4em;
+  padding-top: 2em;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* ORCID icon size */
+.orcid-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 1.2em;
+  }
+
+  nav a {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+}
+
+.header-with-photo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.profile-float {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  bottom: 0;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0; /* prevents image from shrinking on small screens */
+}
