@@ -5,15 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Zihan's Homepage</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .profile-float {
-      width: 420px;     
-      max-width: 40vw;  
-      height: auto;
-      border-radius: 6px;
-      object-fit: cover;
-    }
-  </style>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 const themes = [
@@ -52,7 +43,9 @@ document.querySelectorAll(".pub").forEach(box => {
     0009-0000-4620-5245
     </a>
   </div>
-  <img src="files/profile1.jpg" alt="My photo" class="profile-float">
+  <div class="profile-float">
+    <img src="files/dou.jpg" alt="My photo" width="820" height="834">
+  </div>
 </div>
 
   <section id="about">
@@ -141,9 +134,8 @@ document.querySelectorAll(".pub").forEach(box => {
       </div>
       <div class="authors">
         with Xianliang Li, Weiyang Liu and Han Bao
-        <br><small>Equal contribution with Xianliang Li.</small>
       </div>
-      <div><em>Accepted at NeurIPS 2026 (Poster)</em></div>
+      <div><em>Accepted at NeurIPS 2026</em></div>
     </div>
 
     <div class="pub">
